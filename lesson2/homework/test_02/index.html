@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get">
+        <table>
+            <tr>
+                <th>labels</th>
+                <th>inputs</th>
+            </tr>
+
+            <tr>
+                <td><label for="name">Введите свое имя:</label></td>
+                <td><input id="name" type="text" placeholder="Здесь должно быть ваше имя" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="age">Введите ваш возраст:</label></td>
+                <td><input id="age" type="number"></td>
+            </tr>
+
+            <tr>
+                <td><label for="pass">Введите пароль:</label></td>
+                <td><input id="pass" type="password"></td>
+            </tr>
+
+            <tr>
+                <td><label for="date">Дата рождения:</label></td>
+                <td><input id="date" type="date"></td>
+            </tr>
+
+            <tr>
+                <td><label for="gender">Выберите пол:</label></td>
+                <td><label for="male">M</label>
+                <input id="male" type="radio" name="gender">
+                <label for="female">F</label>
+                <input id="female" type="radio" name="gender"></td>
+            </tr>
+
+            <tr>
+                <td><label for="reading">Любите ли вы кодить?</label></td>
+                <td><input id="reading" type="checkbox"></td>
+            </tr>
+
+            <tr>
+                <td><label for="reading">У вас есть кот?</label></td>
+                <td><input id="reading" type="checkbox"></td>
+            </tr>
+
+            <tr>
+                <td><label for="reading">Оцените нас:</label></td>
+                <td >
+                    <label for="rate">1</label>
+                    <input style="vertical-align: bottom;" id="rate" type="range" min="1" max="10">
+                    <label for="rate">10</label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><textarea rows="5" cols="42" placeholder="Введите ваш комментарий сюда"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select>
+                        <option>Вариант 1</option>
+                        <option>Вариант 2</option>
+                    </select>
+                </td>
+                <td style="text-align: right;">
+                    <button type="submit">Отправить</button>
+                    <button type="reset">Oчистить</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
