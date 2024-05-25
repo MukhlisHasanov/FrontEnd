@@ -11,23 +11,27 @@
 
 .inner1 {
     width: 200px;
-    height: 200px;
+    min-height: 200px;
     background-color: aquamarine;
     color: blue;
     text-align: justify;
     /* border-color: black;
     border-style: solid;
     border-width: 3px; */
-    border: solid 3px black;
-    /* border-radius: 10px; */
+    border: solid 15px black;
+  /* border-radius: 10px; */
     /* margin-top: 25px;
-    margin-bottom: 25px;
     margin-left: 25px;
+    margin-bottom: 25px;
     margin-right: 25px; */
-    margin: 25px;
-    margin: 25px 55px; /* 1 - up down, 2 - right left */
-margin: 25px 60px 35px  100px;
-
+    /* margin: 25px; все по 25 пикселей  */
+    /* margin: 25px 55px; 1 - верхнее и нижее, 2 - лево право */
+    /* margin: 25px 60px 30px;  верх, лево и право, низ */
+    /* margin: 10px 60px 35px 100px; */
+    margin: 20px auto;
+    padding: 10px 10px;
+    box-sizing: content-box;
+    /* overflow: hidden; */
 
 }
 

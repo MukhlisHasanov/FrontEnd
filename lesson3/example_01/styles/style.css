@@ -1,0 +1,32 @@
+.text {
+    font-size: 30px;
+}
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+/* 
+.red, .blue, .green, .yellow {
+    font-size: 30px;
+} */
+
+
+/* DRY
+don't repeat yourself
+
+WET
+write everything twice */
+
+
