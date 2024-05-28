@@ -3,6 +3,8 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    display: grid;
+    overflow: hidden;
 }
 
 .line1, .line2, .line3, .line4, .figure {
@@ -41,6 +43,7 @@
     width: 300px;
     transform: rotate(45deg);
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    overflow-clip-margin: ;
     color: black;
     display: flex;
     align-items: center;
