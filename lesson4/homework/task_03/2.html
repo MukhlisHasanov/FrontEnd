@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Block</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            background-color: rgb(71, 159, 248);
+        }
+
+        .line {
+            position: absolute;
+            background-color: rgb(237, 189, 64);
+        }
+
+        .line.vertical {
+            width: 3px;
+            height: 100%;
+        }
+
+        .line.horizontal {
+            height: 3px;
+            width: 100%;
+        }
+
+        .line1 {
+            left: 30px;
+            top: 0;
+        }
+
+        .line2 {
+            right: 30px;
+            top: 0;
+        }
+
+        .line3 {
+            top: 30px;
+            left: 0;
+        }
+
+        .line4 {
+            bottom: 30px;
+            left: 0;
+        }
+
+        .figure {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 200px;
+            height: 60px;
+            background-color: rgb(237, 189, 64);
+            transform: rotate(45deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: polygon(20% 0%, 100% 0%, calc(100% - 60px) 0px, calc(100% - 30px) calc(100% - 30px), 100% 100%, 0% 100%);
+        }
+
+        .figure span {
+            transform: rotate(-45deg);
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="line line1 vertical"></div>
+        <div class="line line2 vertical"></div>
+        <div class="line line3 horizontal"></div>
+        <div class="line line4 horizontal"></div>
+        <div class="figure"><span>ТЕКСТ</span></div>
+    </div>
+</body>
+</html>
