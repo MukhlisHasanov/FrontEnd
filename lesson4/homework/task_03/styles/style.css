@@ -1,8 +1,8 @@
 .box {
     background-color: rgb(71, 159, 248);
-    position: absolute;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: grid;
     overflow: hidden;
 }
@@ -36,6 +36,8 @@
     height: 3px;
 }
 
+.block1
+
 .figure {
     right: -34px;
     top: 86px;
@@ -43,7 +45,6 @@
     width: 300px;
     transform: rotate(45deg);
     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    overflow-clip-margin: ;
     color: black;
     display: flex;
     align-items: center;

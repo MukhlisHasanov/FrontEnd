@@ -1,0 +1,8 @@
+.bg-pic {
+    background: url(../images/cat.png);
+    height: 300px;
+    border: 2px solid black;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
