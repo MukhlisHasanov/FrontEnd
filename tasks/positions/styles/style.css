@@ -1,0 +1,56 @@
+.back {
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+.comp {
+    position: absolute;
+}
+
+.planet1 {
+    top: 20px;
+    left: 180px;
+    z-index: 1;
+
+}
+
+.planet2 {
+    top: 60px;
+    left: 40px;
+    z-index: 2;
+
+}
+
+.planet3 {
+    bottom: 20px;
+    left: 150px;
+    z-index: 4;
+
+}
+
+.asteroid {
+    top: 80px;
+    right: 110px;
+
+}
+
+.spaceship {
+    top: 150px;
+    left: 150px;
+    z-index: 3;
+
+}
+
+.superman {
+    bottom: -4px;
+    right: 35px;
+
+}
+
+.ufo {
+    bottom: 50px;
+    left: 120px;
+    z-index: 5;
+
+}
