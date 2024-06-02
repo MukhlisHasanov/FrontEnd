@@ -6,15 +6,9 @@
 
 .box {
     font-size: 24px;
-    text-align: center;
-    justify-content: center;
-    position: relative;
-    width: 100vh;
-    height: 100vh;
+    font-weight: bold;
     border: 1px solid black;
     border-radius: 5px;
-    font-size: 24px;
-    overflow: hidden;
 }
 
 .block {
@@ -25,57 +19,50 @@
     margin-left: 10px;
     margin-right: 10px;
     overflow: hidden;
+    text-align: center;
+    justify-content: top;
 }
 
 .header {
     background-color: rgb(201, 237, 255);
-    max-height: 80px;
-    
+    height: 100px;
 }
 
 .nav {
     background-color: rgb(250, 207, 214);
+    height: 60px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
 }
 
 .section {
     background-color: rgb(237, 255, 169);
-    max-width: 60vh;
-    flex-basis: 30%;
+    min-height: 200px;
 }
 
 .aside {
     background-color: rgb(255, 242, 181);
     display: flex;
-    overflow: hidden;
-    max-width: 36vh;
-    position: absolute;
-    right: 10px;
-    margin-top: 10px;
-    height: calc(100vh - 320px);
-    border-radius: 5px;
+    flex: 1;
 }
 
 
 .article {
     background-color: rgb(222, 208, 237);
-    max-width: 60vh;
-    flex-basis: 30%;
+    min-height: 200px;
 }
 
 .footer {
     background-color: rgb(187, 255, 214);
-    max-height: 80px;
-    /* justify-self: flex-end;
-    align-self: flex-end; */
-    position: absolute;
-    bottom: 10px;
-    width: 96.5vh;
+    height: 100px;
+    margin-bottom: 10px;
 }
-/* 
-.footerBox {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 33%;
-} */
