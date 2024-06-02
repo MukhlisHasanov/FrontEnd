@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Layout</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      height: 50px; /* заданная высота */
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+    }
+
+    nav {
+      width: 200px;
+      background-color: #f4f4f4;
+    }
+
+    section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    aside {
+      width: 200px;
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Header
+  </header>
+  <main>
+    <nav>
+      Nav
+    </nav>
+    <section>
+      Content
+    </section>
+    <aside>
+      Sidebar
+    </aside>
+  </main>
+  <footer>
+    Footer
+  </footer>
+</body>
+</html>

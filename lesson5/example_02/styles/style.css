@@ -1,73 +1,52 @@
 * {
-    box-sizing: border-box;    
+    margin: 0;
+    padding: 0;
 }
 
-.figure {
-    background-color: yellow;
-    width: 300px;
-    height: 50px;
-    position: absolute;
-    right: -60px;
-    top: 60px;
-    transform: rotate(45deg);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: "Lora", serif;
-    font-size: 32px;
-}
-
-.transparentBox {
-    overflow: hidden;
-    width: 100%;
-    height: 100%; 
-    position: relative;
-    
-}
-
-.blueBox {
+.blue {
+    height: 150px;
     background-color: aqua;
-    width: 100%;
-    height: 100vh;
-    /* position: relative; */
-    padding: 23px;
 }
 
-
-.line1 {
-    position: absolute;
-    background-color: yellow;
-    width: 5px;
+.green {
     height: 100%;
+    width: 100px;
+    background-color: green;
+}
+
+.red {
+    background-color: coral;
+    width: 100%;
+    height: 30vh;
+}
+
+.parent {
+    background-color: gray;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.block {
+    height: 100px;
+    width: 100px;
+}
+
+.block1 {
+    background-color: red;
+    position: relative;
     left: 20px;
-    top: 0;
-
 }
 
-.line2 {
+.block2 {
+    background-color: blueviolet;
     position: absolute;
-    background-color: yellow;
-    right: 20px;
-    width: 5px;
-    height: 100%;
-    top: 0;
+    top: 30px;
+    left: 30px;
+    border-radius: 50%;
 }
 
-.line3 {
-    position: absolute;
-    background-color: yellow;
-    top: 20px;
-    width: 100%;
-    height: 5px;
-    left: 0;
-}
-
-.line4 {
-    position: absolute;
-    background-color: yellow;
-    bottom: 20px;
-    width: 100%;
-    height: 5px;
-    left: 0;
+.block3 {
+    background-color: orange;
 }
