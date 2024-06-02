@@ -2,97 +2,80 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
     position: relative;
     width: 100vh;
     height: 100vh;
-    /* align-items: center; */
-  
     border: 1px solid black;
     border-radius: 5px;
     font-size: 24px;
+    overflow: hidden;
 }
 
 .block {
+    display: flex;
+    flex-direction: column;
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    
-   
-    /* justify-content: space-between; */
-    /* height: fit-content;
-    width: fit-content; */
-    /* position: absolute;
-    text-align: center;
-    justify-content: center; */
-    /* gap: 20px; */
+    overflow: hidden;
 }
 
 .header {
     background-color: rgb(201, 237, 255);
-    height: 80px;
+    max-height: 80px;
+    
 }
 
 .nav {
     background-color: rgb(250, 207, 214);
-
 }
 
-.content {
-    display: flex;
-    
-}
 .section {
-    /* position: absolute;
-    top: 10px;
-    left: 0; */
     background-color: rgb(237, 255, 169);
-    
-    /* top: 160px;
-    height: 207.5px;
-    width: 350px; */
-}
-
-.article {
-    background-color: rgb(222, 208, 237);
-    
-    position: absolute;
-    bottom: 120px;
-    left: 0;
-    /* top: 377.5px;
-    height: 207.5px;
-    width: 350px;
-     */
+    max-width: 60vh;
+    flex-basis: 30%;
 }
 
 .aside {
     background-color: rgb(255, 242, 181);
- 
+    display: flex;
+    overflow: hidden;
+    max-width: 36vh;
     position: absolute;
     right: 10px;
-    top: 140px;
-    /* align-self: flex-end;
-    justify-self: flex-start;
-    flex-basis: 40%; */
+    margin-top: 10px;
+    height: calc(100vh - 320px);
+    border-radius: 5px;
+}
 
+
+.article {
+    background-color: rgb(222, 208, 237);
+    max-width: 60vh;
+    flex-basis: 30%;
 }
 
 .footer {
     background-color: rgb(187, 255, 214);
-    height: 80px;
+    max-height: 80px;
+    /* justify-self: flex-end;
+    align-self: flex-end; */
     position: absolute;
     bottom: 10px;
-    width: 96vh;
-    /* width: 96vh;
-    height: 100px;
-    align-items: flex-end;
-    bottom: 10px;
-    position: absolute; */
-
+    width: 96.5vh;
 }
+/* 
+.footerBox {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+} */
