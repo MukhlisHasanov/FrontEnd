@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genre{
+    display: flex;
+    background-color: yellow;
+    width: fit-content;
+    padding: 3px;
+    height: fit-content;
+    margin: 2px;
+    border-radius: 2px;
+    color: black;
+    justify-self: flex-start;
+    font-weight: bold;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.block {
+    min-width: 400px;
+    min-height: 720px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex: 1 1 30%;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 5px;
+}
+
+.year {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.description{
+    font-size: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.block1 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/11.png);
+}
+
+.block2 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/greenmile.png);
+}
+
+.block3 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/forest.webp);
+}
+
+.block4 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/club.png);
+}
+
+.block5 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/ghost.webp);
+}
+
+.block6 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/shawshank.png);
+}
+
+.block7 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/attackontitan.jpg);
+}
+
+.block8 {
+    background-image: linear-gradient(transparent 40%, black 100%), url(../images/interstellar.jpg);
+}
