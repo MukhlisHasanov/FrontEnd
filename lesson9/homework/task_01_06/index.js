@@ -1,4 +1,4 @@
-console.log('\n' + '=====> task_01 <=====' + '\n');
+console.log('\n=====> task_01 <=====\n');
 
 let array = [];
 const arrayLength = 10;
@@ -13,7 +13,7 @@ console.log("Array: ", array);
 console.log("Max number in Array: ", max);
 console.log("Min number in Array: ", min);
 
-console.log('\n' + '=====> task_02 <=====' + '\n');
+console.log('\n=====> task_02 <=====\n');
 
 let array2 = [];
 const arrayLength2 = 10;
@@ -29,7 +29,7 @@ array2.push(firstNumber);
 console.log("Array: ", array2);
 console.log("Added number: " + firstNumber);
 
-console.log('\n' + '=====> task_03 <=====' + '\n');
+console.log('\n=====> task_03 <=====\n');
 
 let array3 = [];
 const arrayLength3 = 10;
@@ -45,7 +45,7 @@ console.log("Min number in Array: ", min3);
 console.log("Max number in Array: ", max3);
 console.log("Min + Max in Array = " + (min3 + max3));
 
-console.log('\n' + '=====> task_04 <=====' + '\n');
+console.log('\n=====> task_04 <=====\n');
 
 let array4 = [];
 const arrayLength4 = 10;
@@ -62,7 +62,7 @@ for (let j = 0; j < arrayLength4; j++) {
 
 console.log('Sum of numbers in array: ' + sum);
 
-console.log('\n' + '=====> task_05 <=====' + '\n');
+console.log('\n=====> task_05 <=====\n');
 
 let array5 = [];
 const arrayLength5 = 5;
@@ -79,10 +79,22 @@ console.log('third = ' + third);
 console.log('fourth = ' + fourth);
 console.log('fifth = ' + fifth);
 
-console.log('\n' + '=====> task_06 <=====' + '\n');
+console.log('\n=====> task_06 <=====\n');
 
 const text = "Итак, самое длинное научное название: метилпропенилендигидроксициннаменилакрилическая кислота."
-let words = text.split(' ');
+const cleanText = text.replace(/[.,:;?()]/g,'');
+let words = cleanText.split(' ');
 for (let r = 0; r < words.length; r++) {
     console.log(words[r])
+}
+
+console.log('\n=====> task_07 <=====\n');
+
+let reverseArray = [];
+for (let n = words.length - 1; n >= 0; n--) {
+    reverseArray.push(words[n]);
+}
+
+for (let n = 0; n < reverseArray.length; n++) {
+    console.log(reverseArray[n]);
 }
