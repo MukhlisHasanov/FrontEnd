@@ -44,4 +44,4 @@ function getValues(arr, playerName) {
 }
 
 const names = getValues(footballPlayers, 'name');
-console.log(names); 
+console.log(names);
