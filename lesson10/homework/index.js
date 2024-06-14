@@ -42,3 +42,21 @@ console.log('\n=====> task_03 <=====\n');
 Если число не целое - скруглить его в меньшую сторону
 На заданном промежутке ф-ция должна найти и сложить все четные числа и вернуть сумму
  */
+
+
+const randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
+console.log(randomArr);
+const arr2 = [];
+
+for (i = 0; i < randomArr.length; i++) {
+    if (i % 2 == 0) {
+        arr2.push(i);
+        console.log(arr2);
+    } return true
+}
+
+const examp = (a) => {
+    return sum(arr2); n
+}
+
+examp(randomArr)
