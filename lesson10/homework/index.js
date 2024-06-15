@@ -44,19 +44,20 @@ console.log('\n=====> task_03 <=====\n');
  */
 
 
-const randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
+
+
+function getEvenNumbers(randomArr) {
+    let arr2 = [];
+
+    for (let i = 0; i < randomArr.length; i++) {
+        if (randomArr[i] % 2 === 0) {
+            arr2.push(randomArr[i]);
+        }
+    }
+    return arr2;
+}
+
+let randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
 console.log(randomArr);
-const arr2 = [];
-
-for (i = 0; i < randomArr.length; i++) {
-    if (i % 2 == 0) {
-        arr2.push(i);
-        console.log(arr2);
-    } return true
-}
-
-const examp = (a) => {
-    return sum(arr2); n
-}
-
-examp(randomArr)
+let evenNumbers = getEvenNumbers(randomArr);
+console.log(evenNumbers); 
