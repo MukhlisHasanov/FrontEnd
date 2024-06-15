@@ -43,8 +43,8 @@ console.log('\n=====> task_03 <=====\n');
 На заданном промежутке ф-ция должна найти и сложить все четные числа и вернуть сумму
  */
 
-
-
+let randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
+console.log("Random array => ", randomArr);
 
 function getEvenNumbers(randomArr) {
     let arr2 = [];
@@ -57,7 +57,11 @@ function getEvenNumbers(randomArr) {
     return arr2;
 }
 
-let randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
-console.log(randomArr);
 let evenNumbers = getEvenNumbers(randomArr);
-console.log(evenNumbers); 
+console.log("Even numbers array => ", evenNumbers);
+
+let sum = evenNumbers.reduce(function (a, b) {
+    return a + b;
+}, 0);
+
+console.log("Sum of numbers in even array => ", sum);
