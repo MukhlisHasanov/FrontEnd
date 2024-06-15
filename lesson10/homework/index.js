@@ -33,7 +33,7 @@
 // const squareNumb = numb => 'Square number is ' + numb ** 2;
 // console.log(squareNumb(randNum2));
 
-console.log('\n=====> task_03 <=====\n');
+// console.log('\n=====> task_03 <=====\n');
 /**
 Задание 3. Сумма четных чисел в заданном промежутке
 Создайте ф-цию, которая ищет сумму всех четных чисел в заданном промежутке
@@ -43,25 +43,36 @@ console.log('\n=====> task_03 <=====\n');
 На заданном промежутке ф-ция должна найти и сложить все четные числа и вернуть сумму
  */
 
-let randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
-console.log("Random array => ", randomArr);
+// let randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
+// console.log("Random array => ", randomArr);
 
-function getEvenNumbers(randomArr) {
-    let arr2 = [];
+// function getEvenNumbers(randomArr) {
+//     let arr2 = [];
 
-    for (let i = 0; i < randomArr.length; i++) {
-        if (randomArr[i] % 2 === 0) {
-            arr2.push(randomArr[i]);
-        }
-    }
-    return arr2;
-}
+//     for (let i = 0; i < randomArr.length; i++) {
+//         if (randomArr[i] % 2 === 0) {
+//             arr2.push(randomArr[i]);
+//         }
+//     }
+//     return arr2;
+// }
 
-let evenNumbers = getEvenNumbers(randomArr);
-console.log("Even numbers array => ", evenNumbers);
+// let evenNumbers = getEvenNumbers(randomArr);
+// console.log("Even numbers array => ", evenNumbers);
 
-let sum = evenNumbers.reduce(function (a, b) {
-    return a + b;
-}, 0);
+// let sum = evenNumbers.reduce(function (a, b) {
+//     return a + b;
+// }, 0);
 
-console.log("Sum of numbers in even array => ", sum);
+// console.log("Sum of numbers in even array => ", sum);
+
+console.log('\n=====> task_04 <=====\n');
+
+/**
+ Задание 4. Простые числа в заданном промежутке
+Нужно создать две функции.
+Первая функция должна принимать число и возвращать результат булевого типа - является ли число простым, или нет. Число является простым, если оно делиться без остатка только на 1 и само на себя.
+Вторая функция должна вернуть в виде массива все простые числа в промежутке от 1 до n, где n - первый аргумент функции.
+Вторая функция должна пользоваться первой функцией для определения простых чисел.
+Первая функция не должна быть колбеком, просто рядом лежать, или даже внутри второй функции. На ваш выбор.
+ */
