@@ -43,7 +43,7 @@
 На заданном промежутке ф-ция должна найти и сложить все четные числа и вернуть сумму
  */
 
-// let randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1); // массив из 10 случайных чисел от 0 до 99
+// let randomArr = Array(10).fill().map(() => Math.floor(Math.random() * 100) + 1);
 // console.log("Random array => ", randomArr);
 
 // function getEvenNumbers(randomArr) {
@@ -76,3 +76,30 @@ console.log('\n=====> task_04 <=====\n');
 Вторая функция должна пользоваться первой функцией для определения простых чисел.
 Первая функция не должна быть колбеком, просто рядом лежать, или даже внутри второй функции. На ваш выбор.
  */
+
+function checkForPrimeNumber(num) {
+    num = Math.floor(num);
+        if (num < 2) {
+            return false;
+        }
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    checkForPrimeNumber();
+    
+    
+    const returnArrayPrimeNumbers = (n) => {
+        const arr = [];
+        for (let i = 1; i <= n; i++) {
+            if (checkForPrimeNumber(i)) {
+                arr.push(i);
+            }
+        }
+        return arr;
+    }
+    
+    console.log('Fill the array with prime numbers: ', returnArrayPrimeNumbers(17));
