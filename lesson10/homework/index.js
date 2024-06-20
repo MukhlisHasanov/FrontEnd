@@ -66,7 +66,7 @@
 
 // console.log("Sum of numbers in even array => ", sum);
 
-console.log('\n=====> task_04 <=====\n');
+// console.log('\n=====> task_04 <=====\n');
 
 /**
  Задание 4. Простые числа в заданном промежутке
@@ -79,27 +79,95 @@ console.log('\n=====> task_04 <=====\n');
 
 function checkForPrimeNumber(num) {
     num = Math.floor(num);
-        if (num < 2) {
+    if (num < 2) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
             return false;
         }
-        for (let i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i === 0) {
-                return false;
-            }
-        }
-        return true;
     }
-    checkForPrimeNumber();
-    
-    
-    const returnArrayPrimeNumbers = (n) => {
-        const arr = [];
-        for (let i = 1; i <= n; i++) {
-            if (checkForPrimeNumber(i)) {
-                arr.push(i);
-            }
+    return true;
+}
+checkForPrimeNumber();
+
+const returnArrayPrimeNumbers = (n) => {
+    const arr = [];
+    for (let i = 1; i <= n; i++) {
+        if (checkForPrimeNumber(i)) {
+            arr.push(i);
         }
-        return arr;
     }
-    
-    console.log('Fill the array with prime numbers: ', returnArrayPrimeNumbers(17));
+    return arr;
+}
+
+console.log('Fill the array with prime numbers: ', returnArrayPrimeNumbers(17));
+
+console.log('\n=====> task_05 <=====\n');
+
+/**
+*  Задание 5. (необязательное)
+* «FizzBuzz»
+* Напишите функцию fizzBuzz(n), принимающую как аргумент натуральное число.
+* Функция должна выводить в консоль числа от 1 до n, заменяя числа:
+• кратные трём — на fizz;
+• кратные пяти — на buzz;
+• кратные и трём, и пяти одновременно — на fizzbuzz.
+*/
+
+// function fizzBuzz(numb) {
+//     // numb = Math.floor(numb);
+//     for (let j = 1; j <= numb; j++) {
+//         if (numb % 3 === 0) {
+//             console.log('fizz');
+//         } else if (numb % 5 === 0) {
+//             console.log('buzz');
+//         } else if (numb % 3 === 0 && numb % 5 === 0) {
+//             console.log('fizzbuzz');
+//         } else {
+//             console.log('NaN');
+//         }
+//     }
+// }
+// fizzBuzz(16);
+
+// const returnArrayNaturalNumbers = (n, fizzBuzz) => {
+//     const result = fizzBuzz(n);
+//     const arr2 = [];
+//     for (let i = 1; i <= n; i++) {
+//         if (fizzBuzz(i)) {
+//             arr2.push(i);
+//         }
+//     }
+//     return arr2;
+// }
+
+// console.log('The number ${n} is: ${result}');
+// }
+
+// returnArrayNaturalNumbers(2, fizzBuzz);
+// returnArrayNaturalNumbers(20, fizzBuzz);
+// returnArrayNaturalNumbers(22, fizzBuzz);
+// returnArrayNaturalNumbers(43, fizzBuzz);
+// returnArrayNaturalNumbers(30, fizzBuzz);
+
+
+
+// console.log('\n=====> task_06 <=====\n');
+/** Задание 6. (необязательное)
+* Напишите функцию reverseWords(str), принимающую на вход строку.
+* Функция должна вернуть новую строку, расставив слова в обратном порядке.
+* Если в строке есть знаки препинания, их можно удалить или оставить — на ваше усмотрение.
+*/
+
+
+// console.log('\n=====> task_07 <=====\n');
+/** Задание 7. (необязательное)
+* Напишите функцию intersection(arr1, arr2). 
+* Она должна принимать на вход два массива целых чисел. 
+* Функция должна вернуть новый массив чисел, содержащихся в обоих исходных массивах.
+* Протестируйте решение, вызывая функцию с разными аргументами:
+• console.log(intersection([1, 5, 4, 2], [8, 91, 4, 1, 3])); // должна вернуть [4, 1] 
+• console.log(intersection([1, 5, 4, 2], [7, 12])); // должна вернуть [] 
+• console.log(intersection([1, 1, 0, 0, 0, 1, 5, 4, 2], [7, 12, 1, 1, 1, 1, 1, 0, 0, 0, 0])); // должна вернуть []
+*/
