@@ -48,19 +48,24 @@ function core(arrList) {
 };
 core(todoList);
 
-
-
 // кнопка "Создать"
 const btnCreate = document.querySelector('#create');
 const inputTask = document.querySelector('.task-input');
 
 const btnClickCreate = () => {
     const textFromInput = inputTask.value;
-    todoList.unshift({ task: textFromInput, done: false });
-    core(todoList);
+    if (textFromInput == '') {
+        inputTask.classList.add('emptyInput');
+        inputTask.classList.add('red-placeholder');
+    } else {
+        todoList.unshift({ task: textFromInput, done: false });
+        inputTask.classList.remove('emptyInput');
+        inputTask.classList.remove('red-placeholder');
+        core(todoList);
+    }
 }
 btnCreate.addEventListener('click', btnClickCreate);
-
+        
 
 // Фильтры
 const filter = document.querySelector('.status');
@@ -95,3 +100,6 @@ const btnClickUCompleted = () => {
 btnUnCompleted.addEventListener('click', btnClickUCompleted);
 
 // switcher
+
+
+// 1. Добавил проверку на пустой ввод

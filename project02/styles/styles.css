@@ -37,11 +37,23 @@
     transition: all300ms ease;
 }
 
+.btn:active {
+    transform: translateY(5px);
+}
+
 .task-input {
     height: 32px;
     border-radius: 4px;
     border: 0;
     flex: 1;
+}
+
+.emptyInput {
+    border: 2px solid rgb(227, 0, 0);
+}
+
+.red-placeholder::placeholder {
+    color: red; 
 }
 
 .list {
@@ -66,3 +78,4 @@
     text-decoration: line-through;
     background-color: darkgray;
 }
+
