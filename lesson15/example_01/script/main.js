@@ -16,15 +16,6 @@ let todoList = [
     { task: "Поехать в отпуск", done: false }
 ];
 
-// звуки
-
-const audioEmptyEnter = document.getElementById("myAudio3");
-const audioDone = document.getElementById("myAudio1");
-audioDone.playbackRate = 1.7;
-const audioNoDone = document.getElementById("myAudio6");
-const audioScroll = document.getElementById("myAudio5");
-const audioNuN = document.getElementById("myAudio4");
-
 
 function core(arrList) {
     // выводим список объктов массива
@@ -34,9 +25,6 @@ function core(arrList) {
 
     const createElem = arrList.map(list => {
         const listItem = document.createElement('li');
-        // listItem.addEventListener('mouseover', () => {
-        //     audioScroll.play();
-        // })        
         listItem.textContent = list.task;
         listItem.classList.add('list-item');
         if (list.done == true) {
@@ -46,12 +34,9 @@ function core(arrList) {
             if (list.done == false) {
                 listItem.classList.add('list-item_done');
                 list.done = true;
-                audioDone.play();
             } else if (list.done == true) {
                 listItem.classList.remove('list-item_done');
                 list.done = false;
-                audioNoDone.play();
-                
             }
         });
         return listItem;
@@ -63,30 +48,27 @@ function core(arrList) {
 };
 core(todoList);
 
+
+
 // кнопка "Создать"
 const btnCreate = document.querySelector('#create');
 const inputTask = document.querySelector('.task-input');
 
-const btnClickCreate = () => {
-    const textFromInput = inputTask.value;
-    if (textFromInput == '') {
-        inputTask.classList.add('emptyInput');
-        inputTask.classList.add('red-placeholder');
-        audioEmptyEnter.play();
-        
-    } else {
-        todoList.unshift({ task: textFromInput, done: false });
-        inputTask.classList.remove('emptyInput');
-        inputTask.classList.remove('red-placeholder');
-        core(todoList);
+const btnClickCreate = (evt) => {
+    evt.preventDefault();
+    console.log(evt.target.classList[0]);
+    if(evt.target.classList === 'btn') {
+        console.log("Мы нашли кнопку с классом btn");
     }
+    if (evt.target.textContent === 'Создать') {
+        console.log("Мы нашли кнопку с классом Создать");
+    }
+    const textFromInput = inputTask.value;
+    todoList.unshift({ task: textFromInput, done: false });
+    core(todoList);
 }
 btnCreate.addEventListener('click', btnClickCreate);
-inputTask.addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') {
-        btnClickCreate();
-    }
-});       
+
 
 // Фильтры
 const filter = document.querySelector('.status');
@@ -117,16 +99,7 @@ const btnUnCompleted = document.querySelector('#uncompleted');
 const btnClickUCompleted = () => {
     const filterUnCompleted = todoList.filter(task => task.done == false);
     core(filterUnCompleted);
-    audioNuN.play();
 }
 btnUnCompleted.addEventListener('click', btnClickUCompleted);
 
-// звуки
-
-
-
-
 // switcher
-
-
-// 1. Добавил проверку на пустой ввод
