@@ -1,0 +1,17 @@
+h1 {
+    color: rgb(61, 61, 61);
+}
+
+img {
+    position: absolute;
+    right: 10px;
+    bottom: 90px;
+    height: 200px;
+    width:  350px;
+    
+}
+
+table {
+    background-color: bisque;
+}
+
