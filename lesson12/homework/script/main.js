@@ -38,13 +38,6 @@ const data = [
 const bmiTable = createTable(data);
 document.body.appendChild(bmiTable);
 
-const imageBodyFit = document.createElement('img');
-imageBodyFit.setAttribute('src', './images/scale_2400.jpg');
-imageBodyFit.setAttribute('alt', 'Изображение ИМТ');
-imageBodyFit.style.width = '100%';
-imageBodyFit.style.maxWidth = '600px';
-document.body.appendChild(imageBodyFit);
-
 const paragraph3 = document.createElement('p');
 paragraph3.textContent = 'В частности, результат ИМТ является одним из факторов для выполнения бариатрической операции. Но стоит помнить, что результат носит рекомендательный характер. Перед принятием решения необходима консультация бариатрического хирурга. Для этого Вы можете оставить заявку или позвонить по телефону, указанному на сайте.'
 document.body.appendChild(paragraph3);
@@ -70,8 +63,6 @@ function createTable(data) {
     });
     return table;
 }
-// document.body.appendChild(createTable(data));
-
 
 function calculateBMI() {
     const height = parseFloat(document.getElementById('height').value);
@@ -91,26 +82,22 @@ function calculateBMI() {
     // Округляем ИМТ до двух знаков после запятой
     const bmiRounded = bmi.toFixed(2);
 
-
     let bmiCategory;
     if (bmi < 16) {
-      bmiCategory = 'Выраженный дефицит массы тела';
+        bmiCategory = 'Выраженный дефицит массы тела';
     } else if (bmi >= 16 && bmi < 18.5) {
-      bmiCategory = 'Недостаточная (дефицит) масса тела';
+        bmiCategory = 'Недостаточная (дефицит) масса тела';
     } else if (bmi >= 18.5 && bmi < 25) {
-      bmiCategory = 'Норма';
+        bmiCategory = 'Норма';
     } else if (bmi >= 25 && bmi < 30) {
-      bmiCategory = 'Избыточная масса тела (предожирение)';
+        bmiCategory = 'Избыточная масса тела (предожирение)';
     } else if (bmi >= 30 && bmi < 35) {
-      bmiCategory = 'Ожирение первой степени';
+        bmiCategory = 'Ожирение первой степени';
     } else if (bmi >= 35 && bmi < 40) {
-      bmiCategory = 'Ожирение второй степени';
+        bmiCategory = 'Ожирение второй степени';
     } else {
-      bmiCategory = 'Ожирение третьей степени (морбидное)';
+        bmiCategory = 'Ожирение третьей степени (морбидное)';
     }
 
     resultElement.innerHTML = `<h3>Ваш ИМТ: ${bmiRounded}</h3><p>Оценка состояния: ${bmiCategory}</p>`;
 }
-
-
-
