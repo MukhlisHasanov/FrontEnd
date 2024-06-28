@@ -16,6 +16,13 @@ console.log('\n=====> task_02 <=====\n');
  * Если получится использовать метод reduce - будет здорово.
  */
 
+const numbers = [];
+for(let i = 0; i < 10; i++) {
+numbers.push(Math.round(Math.random() * 10));
+}
+console.log(numbers);
+const sum = numbers.reduce((acc, num) => acc + num, 0);
+console.log('Sum of numbers is ' + sum);
 
 
 
