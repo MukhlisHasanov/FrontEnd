@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="data:,">
+    <title>Countdown Timer</title>
+</head>
+
+<body>
+    <h1 class="name-application">Timer</h1>
+    <main class="menu">
+        <div class="actions">
+            <input class="time-input" type="number" placeholder="enter time in seconds" min="1" required>
+            <button class="btn" id="start" type="submit">Start</button>
+        </div>
+        <br>
+        <div class="count" id="countdown">Countdown</div>
+        <br>
+        <div class="text" id="time-out">Timeout</div>
+        <audio id="alert-sound" src="./sound/homework_16_task_01_sound_hotel-bell-ding-1-174457.mp3"></audio>
+        <script src="./scripts/main.js"></script>
+    </main>
+</body>
+
+</html>

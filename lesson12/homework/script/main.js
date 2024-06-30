@@ -85,15 +85,15 @@ function calculateBMI() {
     let bmiCategory;
     if (bmi < 16) {
         bmiCategory = 'Выраженный дефицит массы тела';
-    } else if (bmi >= 16 && bmi < 18.5) {
+    } else if (bmi < 18.5) {
         bmiCategory = 'Недостаточная (дефицит) масса тела';
-    } else if (bmi >= 18.5 && bmi < 25) {
+    } else if (bmi < 25) {
         bmiCategory = 'Норма';
-    } else if (bmi >= 25 && bmi < 30) {
+    } else if (bmi < 30) {
         bmiCategory = 'Избыточная масса тела (предожирение)';
-    } else if (bmi >= 30 && bmi < 35) {
+    } else if (bmi < 35) {
         bmiCategory = 'Ожирение первой степени';
-    } else if (bmi >= 35 && bmi < 40) {
+    } else if (bmi < 40) {
         bmiCategory = 'Ожирение второй степени';
     } else {
         bmiCategory = 'Ожирение третьей степени (морбидное)';
