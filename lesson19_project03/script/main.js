@@ -1,5 +1,5 @@
 const fetchResult = async () => {
-    const response = await fetch('http://api.weatherapi.com/v1/forecast.json?key=e462a74ae043481191f171850240107&q=Antananarivo&days=7&aqi=no&alerts=no')
+    const response = await fetch('http://api.weatherapi.com/v1/forecast.json?key=e462a74ae043481191f171850240107&q=Antananarivo&days=7&aqi=no&alerts=no');
     const bodyData = await response.json();
 
     const cityElement = document.querySelector('.city-text');
@@ -8,6 +8,30 @@ const fetchResult = async () => {
     const weatherElement = document.querySelector('#weather');
     const tempNowElement = document.querySelector('.temperature-now-text');
 
+
+    // for (let n = 1; n < 7; n++) {
+
+    //     const smallImg1 = document.querySelector(`#icon${n}`);
+    //     if (smallImg1)
+    //         smallImg1.src = bodyData.forecast.forecastday[n].day.condition.icon;
+
+    //     const tempMax = document.querySelector('#temp-max2');
+    //     tempMax.textContent = bodyData.forecast.forecastday[2].maxtemp_c;
+
+    //     const tempMin = document.querySelector(`#temp-min${n}`);
+    //     tempMin.textContent = `bodyData.forecast.forecastday. ${n} .mintemp_c`;
+
+    //     const weekDay = document.querySelector(`#day${n}`);
+    //     weekDay.textContent = weekDayName(`bodyData.forecast.forecastday.${n}.date`);
+    // }
+
+    // function weekDayName(localWeekDay) {
+    //     const date = new Date(dateStr.replace(' ', 'T'));
+    //     const options = { weekday: 'long' };
+    //     const longWeekdayName = new Intl.DateTimeFormat('en-US', options).format(date);
+    //     const shortWeekdayName = longWeekdayName.substring(0, 3);
+    //     return shortWeekdayName;
+    // }
 
     cityElement.textContent = bodyData.location.name;
     dateElement.textContent = localtime(bodyData.location.localtime);
@@ -33,10 +57,10 @@ const fetchResult = async () => {
 
     })
 
-    for (let i = 0;  i < 7; i++) {
-        
-        
-        
+    for (let i = 0; i < 7; i++) {
+
+
+
     }
 
 }
