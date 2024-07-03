@@ -9,29 +9,28 @@ const fetchResult = async () => {
     const tempNowElement = document.querySelector('.temperature-now-text');
 
 
-    // for (let n = 1; n < 7; n++) {
+    for (let n = 1; n < 7; n++) {
 
-    //     const smallImg1 = document.querySelector(`#icon${n}`);
-    //     if (smallImg1)
-    //         smallImg1.src = bodyData.forecast.forecastday[n].day.condition.icon;
+        const smallImg1 = document.querySelector(`#icon${n}`);
+        smallImg1.src = bodyData.forecast.forecastday[n].day.condition.icon;
 
-    //     const tempMax = document.querySelector('#temp-max2');
-    //     tempMax.textContent = bodyData.forecast.forecastday[2].maxtemp_c;
+        const tempMax = document.querySelector(`#temp-max${n}`);
+        tempMax.textContent = bodyData.forecast.forecastday[n].maxtemp_c;
 
-    //     const tempMin = document.querySelector(`#temp-min${n}`);
-    //     tempMin.textContent = `bodyData.forecast.forecastday. ${n} .mintemp_c`;
+        const tempMin = document.querySelector(`#temp-min${n}`);
+        tempMin.textContent = bodyData.forecast.forecastday[n].mintemp_c;
 
-    //     const weekDay = document.querySelector(`#day${n}`);
-    //     weekDay.textContent = weekDayName(`bodyData.forecast.forecastday.${n}.date`);
-    // }
+        const weekDay = document.querySelector(`#day${n}`);
+        weekDay.textContent = weekDayName(bodyData.forecast.forecastday[n].date);
+    }
 
-    // function weekDayName(localWeekDay) {
-    //     const date = new Date(dateStr.replace(' ', 'T'));
-    //     const options = { weekday: 'long' };
-    //     const longWeekdayName = new Intl.DateTimeFormat('en-US', options).format(date);
-    //     const shortWeekdayName = longWeekdayName.substring(0, 3);
-    //     return shortWeekdayName;
-    // }
+    function weekDayName(localWeekDay) {
+        const date = new Date(dateStr.replace(' ', 'T'));
+        const options = { weekday: 'long' };
+        const longWeekdayName = new Intl.DateTimeFormat('en-US', options).format(date);
+        const shortWeekdayName = longWeekdayName.substring(0, 3);
+        return shortWeekdayName;
+    }
 
     cityElement.textContent = bodyData.location.name;
     dateElement.textContent = localtime(bodyData.location.localtime);
