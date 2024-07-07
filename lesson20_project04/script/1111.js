@@ -36,18 +36,35 @@ const fetchResult = async () => {
 
         const filmDetails = await Promise.all(filmRequests);
 
-        filmDetails.forEach(film => console.log(film));
+        const mainDiv = document.querySelector('.main');
+        mainDiv.innerHTML = '';
 
-        const genreElement = document.querySelector('.genre');
-        const yearElement = document.querySelector('.year');
-        const nameElement = document.querySelector('.name');
-        const descriptionElement = document.querySelector('.description');
+        filmDetails.forEach(film => {
+            const filmElement = document.createElement('div');
+            filmElement.classList.add('film');
 
-        nameElement.textContent = filmDetails.nameOriginal;
-        genreElement.textContent = filmDetails.genres;
-        yearElement.textContent = filmDetails.year;
-        descriptionElement.textContent = filmDetails.shortDescription;
-        console.log(nameElement);
+            const nameElement = document.createElement('h2');
+            nameElement.classList.add('name');
+            nameElement.textContent = film.nameOriginal || 'Name undefined';
+            filmElement.appendChild(nameElement);
+
+            const genreElement = document.createElement('p');
+            nameElement.classList.add('genre');
+            genreElement.textContent = `Genre: ${film.genres.map(g => g.genre).join(', ') || 'Undefined'}`;
+            filmElement.appendChild(genreElement);
+
+            const yearElement = document.createElement('p');
+            nameElement.classList.add('year');
+            yearElement.textContent = `Year: ${film.year || 'Undefined'}`;
+            filmElement.appendChild(yearElement);
+
+            const descriptionElement = document.createElement('p');
+            nameElement.classList.add('description');
+            descriptionElement.textContent = film.shortDescription || 'Description is not have';
+            filmElement.appendChild(descriptionElement);
+
+            mainDiv.appendChild(filmElement);
+        });
 
     } catch (error) {
         console.error('Error fetching film data:', error);
