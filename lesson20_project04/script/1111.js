@@ -2,7 +2,7 @@ const fetchResult = async () => {
     const fetchParams = {
         method: 'GET',
         headers: {
-            'X-API-KEY': '12d6b032-42f0-4b24-84bd-877453b84865',
+            'X-API-KEY': '06e18a20-37d9-462b-af98-7c5eaf44c844',
             'Content-Type': 'application/json',
         },
     };
@@ -39,30 +39,44 @@ const fetchResult = async () => {
         const mainDiv = document.querySelector('.main');
         mainDiv.innerHTML = '';
 
-        filmDetails.forEach(film => {
-            const filmElement = document.createElement('div');
-            filmElement.classList.add('film');
+        filmDetails.forEach((film, index) => {
+            const filmElement = document.createElement('article');
+            filmElement.classList.add('article', `film${index + 1}`);
 
-            const nameElement = document.createElement('h2');
+            const nameElement = document.createElement('div');
             nameElement.classList.add('name');
             nameElement.textContent = film.nameOriginal || 'Name undefined';
             filmElement.appendChild(nameElement);
 
-            const genreElement = document.createElement('p');
-            nameElement.classList.add('genre');
-            genreElement.textContent = `Genre: ${film.genres.map(g => g.genre).join(', ') || 'Undefined'}`;
+            const iconDiv = document.createElement('div');
+            iconDiv.classList.add('movieIcon');
+            iconDiv.style.backgroundImage = `url(${film.posterUrl})`;
+            filmElement.appendChild(iconDiv);
+            // const imgElement = document.createElement('img');
+            // imgElement.src = film.icon;
+            // imgElement.alt = '';
+            // iconDiv.append(imgElement);
+            
+
+            const genreElement = document.createElement('div');
+            genreElement.classList.add('genre');
+            genreElement.textContent = film.genres.map(g => g.genre).join(', ') || 'Undefined';
             filmElement.appendChild(genreElement);
 
-            const yearElement = document.createElement('p');
-            nameElement.classList.add('year');
-            yearElement.textContent = `Year: ${film.year || 'Undefined'}`;
+            const filmInfoElement = document.createElement('div');
+            filmInfoElement.classList.add('film-info');
+
+            const yearElement = document.createElement('div');
+            yearElement.classList.add('year');
+            yearElement.textContent = film.year || 'Undefined';
             filmElement.appendChild(yearElement);
 
             const descriptionElement = document.createElement('p');
-            nameElement.classList.add('description');
+            descriptionElement.classList.add('description');
             descriptionElement.textContent = film.shortDescription || 'Description is not have';
             filmElement.appendChild(descriptionElement);
 
+            filmElement.appendChild(filmInfoElement);
             mainDiv.appendChild(filmElement);
         });
 
@@ -74,11 +88,8 @@ const fetchResult = async () => {
 fetchResult();
 
 
-// function displayFilms(films) {
-//     const mainDiv = document.querySelector('.main');
-//     mainDiv.innerHTML = '';
 
-// films.map(id => kinopoiskId);
-
-// }
-
+// Обновлять страницу каждые 10 секунд (10000 миллисекунд)
+setInterval(() => {
+    location.reload();
+}, 10000000);

@@ -64,3 +64,8 @@ const fetchResult = async () => {
 
 }
 fetchResult();
+
+// Обновлять страницу каждые 10 секунд (10000 миллисекунд)
+setInterval(() => {
+    location.reload();
+}, 10000000);
