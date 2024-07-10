@@ -1,0 +1,20 @@
+.building {
+    height: 150px;
+    width: 150px;
+    margin: 30px;
+}
+
+#house1 {
+    background-color: grey;
+
+}
+
+#shop {
+    background-color: grey;
+}
+
+.window {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+}
